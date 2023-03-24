@@ -10,7 +10,7 @@ public class Main {
         Scanner scan = new Scanner(in);
         System.out.print("Введите выражение : ");
         String input = scan.nextLine();
-        System.out.println("Input: " + input);
+        System.out.println("Input: " + "\n" + input);
         in.close();
         input = input.replaceAll("\\s", "");
         String[] arabicNumber = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
@@ -26,7 +26,7 @@ public class Main {
             try {
                 throw new IOException();
             } catch (IOException e) {
-                System.out.println("Формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+                System.out.println("Output: "+ "\n" + "throws Exception // Формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
             }
         }
         boolean found1 = false;
@@ -60,7 +60,6 @@ public class Main {
                 break;
             }
         }
-
         int result;
         int firstNumber;
         int secondNumber;
@@ -75,7 +74,7 @@ public class Main {
             firstNumber = numbers[0];
             secondNumber = numbers[1];
             result = method.function(str3, firstNumber, secondNumber);
-            System.out.println("Output: " + result);
+            System.out.println("Output: "+ "\n" + result);
         } else if (found3 == true && found4 == true) {
             firstNumber = method.switchMethodForRome(str1.toUpperCase());
             secondNumber = method.switchMethodForRome(str2.toUpperCase());
@@ -84,17 +83,17 @@ public class Main {
                 try {
                     throw new IOException();
                 } catch (IOException e) {
-                    System.out.println("В римской системе нет отрицательных чисел и нуля");
+                    System.out.println("Output: "+ "\n" + "throws Exception // В римской системе нет отрицательных чисел и нуля");
                 }
             }
             String outputResult = method.convertationRomeNumberToString(result);
-            System.out.println("Output: " + outputResult);
+            System.out.println("Output: "+ "\n" + outputResult);
         } else {
 
             try {
                 throw new IOException();
             } catch (IOException e) {
-                System.out.println("Используются одновременно разные системы счисления или некорректно введены данные. Необходимо ввести число от 1 до 10 или от I до X!");
+                System.out.println("Output: "+ "\n" + "throws Exception // Используются одновременно разные системы счисления или некорректно введены данные. Необходимо ввести число от 1 до 10 или от I до X!");
             }
         }
     }

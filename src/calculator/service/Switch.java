@@ -35,7 +35,7 @@ public class Switch {
                 number = 10;
                 break;
             default:
-                throw new IllegalStateException("Введена недопустимая переменная ");
+                throw new IllegalStateException("Output: "+ "\n" + "throws Exception // Введена недопустимая переменная ");
         }
     return number;
     }
@@ -55,7 +55,7 @@ public class Switch {
                 result = number1 / number2;
                 break;
             default:
-                throw new IllegalStateException("Введен недопустимый оператор ");
+                throw new IllegalStateException("Output: "+ "\n" + "throws Exception // Введен недопустимый оператор ");
         }
         return result;
     }
