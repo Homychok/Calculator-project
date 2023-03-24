@@ -60,7 +60,6 @@ public class Main {
                 break;
             }
         }
-
         int result;
         int firstNumber;
         int secondNumber;
